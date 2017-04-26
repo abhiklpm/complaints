@@ -9,14 +9,21 @@
 
 <ion-content padding>
 	<form [formGroup]="complaints" (ngSubmit)="saveData()">
-      <ion-item>
-        <ion-label>Subject</ion-label>
-        <ion-input type="text" formControlName="subject"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label>Description</ion-label>
-        <ion-textarea formControlName="description"></ion-textarea>
-      </ion-item>
-      <button ion-button block type="submit" [disabled]="!complaints.valid">Submit</button>
-    </form>
+    <ion-item>
+      <ion-label>Subject</ion-label>
+      <ion-input type="text" formControlName="subject"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-textarea formControlName="description"></ion-textarea>
+    </ion-item>
+    <button icon-left ion-button block class="button button-default" (click)="takePicture()">
+      <span class="button-inner">
+        <ion-icon name="camera"></ion-icon>
+        Take Picture
+      </span>
+      <div class="button-effect"></div>
+    </button>
+    <button ion-button block type="submit" [disabled]="!complaints.valid">Submit</button>
+  </form>
 </ion-content>

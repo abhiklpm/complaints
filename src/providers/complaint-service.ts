@@ -8,7 +8,7 @@ export class ComplaintService {
 
 	constructor(private http: Http) {
 		this.http = http;
-  	}
+	}
 
 	addComplaints(complaint: {subject: string, description: string}) {
 		this.complaints.push(complaint);
